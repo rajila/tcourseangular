@@ -1,0 +1,2 @@
+# new project -> create proyect on path current
+	ng new . 
