@@ -1,2 +1,43 @@
+# install angular
+	npm install -g angular-cli
+
 # new project
-	ng new <name_proyecto> 
+	ng new <name_proyecto>
+
+# Ejecución app angular
+	ng serve
+
+# Ejecutar servidor api
+	npm start
+
+# Agregar un componente: Add el componente en el app.module.ts
+	ng generate component <name_componente>
+
+# Add directive: Añadir comportamiento dinamico
+	ng generate directive <name_directive>
+
+# Add pipe: Genera un dato desde la entrada
+	ng generate pipe <name_pipe>
+
+# Add service:  Son clases complementarias a los componentes que permiten realizar cierta
+				logica o acciones, tal como proporcionar datos a los componentes o
+				realizar peticiones al servidor.
+	ng generate service <name_service>
+
+# Add class: Añade una clase al app
+	ng generate class <name_class>
+
+# Add Guard: Añade funciones que permiten controlar o activar ciertas rutas
+	ng generate guard <name_guard>
+
+# Add Interface: Añade interfaces a la app
+	ng generate interface <name_interface>
+
+# Add Enumeration: Crea una Enumeration
+	ng generate enum <name_enumeration>
+
+# Add Module: Elemento que permite agrupar componentes, servicios, directivas, para una app
+	ng generate module <name_module>
+
+--flat: permite crear elemento sin directorio
+--mdodule: indica donde se debe importar el modulo creado
