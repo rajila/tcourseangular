@@ -1,0 +1,11 @@
+<h2>Father component</h2>
+<p>{{title}}</p>
+Send Money: <input type="number" (input) = "sendMoney($event.target.value);" />
+<hr />
+<section>
+    <app-son [moneyInput] = "moneyOut" (shareMoneyEvent) = "getEventSon($event);"></app-son>
+</section>
+<hr />
+<section>
+    <app-sister [moneyInput] = "moneyOutSister"></app-sister>
+</section>
