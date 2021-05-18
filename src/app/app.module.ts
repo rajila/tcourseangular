@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser'; // Para renderizar la
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FatherComponent } from './components/father/father.component';
-import { SonComponent } from './components/son/son.component';
-import { SisterComponent } from './components/sister/sister.component';
+import { FatherComponent } from './components/comunicationI/father/father.component';
+import { SonComponent } from './components/comunicationI/son/son.component';
+import { SisterComponent } from './components/comunicationI/sister/sister.component';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
