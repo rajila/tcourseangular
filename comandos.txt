@@ -10,6 +10,9 @@
 # Ejecutar servidor api
 	npm start
 
+# version angular
+	ng --version
+
 # Agregar un componente: Add el componente en el app.module.ts
 	ng generate component <name_componente>
 

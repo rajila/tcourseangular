@@ -6,10 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { FatherComponent } from './components/comunicationI/father/father.component';
 import { SonComponent } from './components/comunicationI/son/son.component';
 import { SisterComponent } from './components/comunicationI/sister/sister.component';
+import { MessageextComponent } from './components/comunicationII/messageext/messageext.component';
+import { MessageintComponent } from './components/comunicationII/messageint/messageint.component';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
-    AppComponent, FatherComponent, SonComponent, SisterComponent
+    AppComponent, 
+    FatherComponent, 
+    SonComponent, 
+    SisterComponent, 
+    MessageextComponent, 
+    MessageintComponent
   ],
   exports: [], // declaraciones que son visibles para componentes de otros modulos
   imports: [ // clases que otros modulos exportan para utilizarlas en el modulo actual
