@@ -1,0 +1,9 @@
+<p>receptor works!</p>
+<p>{{msn}}</p>
+<p>Other time print msn, using other alternativa</p>
+<p *ngIf="$_dataEvent.$_nameEvent | async as msnTmp; else sinData">
+    {{msnTmp}}
+</p>
+<ng-template #sinData>
+    It's empty
+</ng-template>
