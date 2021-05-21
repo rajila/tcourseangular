@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser'; // Para renderizar la app en el navegador
+import { FormsModule } from '@angular/forms';
 
 // Components
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { MessageintComponent } from './components/comunicationII/messageint/mess
 
 // Modules
 import { ComunicatonthreeModule } from './components/comunicationIII/comunicatonthree.module';
+import { CmppropiedadComponent } from './components/cmppropiedad/cmppropiedad.component';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
@@ -20,11 +22,12 @@ import { ComunicatonthreeModule } from './components/comunicationIII/comunicaton
     SonComponent, 
     SisterComponent, 
     MessageextComponent,
-    MessageintComponent
+    MessageintComponent,
+    CmppropiedadComponent
   ],
   exports: [], // declaraciones que son visibles para componentes de otros modulos
   imports: [ // clases que otros modulos exportan para utilizarlas en el modulo actual
-    BrowserModule, AppRoutingModule, ComunicatonthreeModule
+    BrowserModule, AppRoutingModule, ComunicatonthreeModule, FormsModule
   ],
   providers: [], // servicios usados de forma global y accesibles desde cualquier parte de la app
   bootstrap: [AppComponent] // vista principal del app. Solo es definida por el modulo principal

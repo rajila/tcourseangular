@@ -1,0 +1,34 @@
+<h1>{{ title }}</h1>
+<div class="container">
+    <p>
+        <input type="checkbox" name="aplicarFondo" [(ngModel)] = "aplicarFondo" /> Fondo
+    </p>
+    <p [class.fondo] = "aplicarFondo">
+        Hi from Component
+    </p>
+    <p>
+        <a [href]="linkGoogle" target="_blank">{{ linkGoogle }}</a>
+    </p>
+    <div>
+        <p>
+            <button type="button" (click)="mostrarSection=!mostrarSection">
+                {{mostrarSection?'Mostrar':'Ocultar'}}
+            </button>
+        </p>
+        <section [hidden]="mostrarSection">
+            <h3>It's visible</h3>
+        </section>
+    </div>
+    <div>
+        <p>
+            <button type="button" (click)="habilitar=!habilitar">
+                {{habilitar?'Habilitar':'Deshabilitar'}}
+            </button>
+        </p>
+        <section>
+            <button type="button" [disabled]="habilitar" (click)="halaMadrid();">
+                Hala Madrid
+            </button>
+        </section>
+    </div>
+</div>
