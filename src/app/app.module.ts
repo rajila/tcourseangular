@@ -14,6 +14,8 @@ import { MessageintComponent } from './components/comunicationII/messageint/mess
 // Modules
 import { ComunicatonthreeModule } from './components/comunicationIII/comunicatonthree.module';
 import { CmppropiedadComponent } from './components/cmppropiedad/cmppropiedad.component';
+import { CmpOneComponent } from './components/usodecorator/cmp-one/cmp-one.component';
+import { CmpTwoComponent } from './components/usodecorator/cmp-two/cmp-two.component';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
@@ -23,7 +25,9 @@ import { CmppropiedadComponent } from './components/cmppropiedad/cmppropiedad.co
     SisterComponent, 
     MessageextComponent,
     MessageintComponent,
-    CmppropiedadComponent
+    CmppropiedadComponent,
+    CmpOneComponent,
+    CmpTwoComponent
   ],
   exports: [], // declaraciones que son visibles para componentes de otros modulos
   imports: [ // clases que otros modulos exportan para utilizarlas en el modulo actual
