@@ -1,9 +1,20 @@
-<p>cmp-one works!</p>
+<section class="contentinternal">
+    <p>cmp-one works!</p>
+</section>
+<section class="contentinternal">
+    <p>X: <input type="number" class="form-control" [(ngModel)]="valueOne" /></p>
+    <p>Y: <input type="number" class="form-control" [(ngModel)]="valueTwo" /></p>
+    <p>{{ lblResult }} {{ resultOperando }}</p>
+</section>
 <section class="contentinternal">
     <app-cmp-two 
         customNameAttr="Hi from component One"
         customSurnameAttr="Ajila component One"
         [countryIn] = "country"
         [motherIn] = "mother"
+        [valueOneIn] = "valueOne"
+        [valueTwoIn] = "valueTwo"
+        [dataJson] = "dataJson"
+        (sendData) = "catchEvent($event)"
     ></app-cmp-two>
 </section>

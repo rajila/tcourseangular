@@ -6,3 +6,10 @@
     <p>Click: {{ contadorClick }}</p>
     <p>MouseOver: {{ contadorMouse }}</p>
 </section>
+<br/>
+<section class="detail-event operando">
+    <input type="button" operator="+" value="+" (click)="onClickData($event);" /> |
+    <input type="button" operator="-" value="-" (click)="onClickData($event);" /> |
+    <input type="button" operator="*" value="*" (click)="onClickData($event);" /> |
+    <input type="button" operator="/" value="/" (click)="onClickData($event);" /> 
+</section>
