@@ -16,6 +16,8 @@ import { ComunicatonthreeModule } from './components/comunicationIII/comunicaton
 import { CmppropiedadComponent } from './components/cmppropiedad/cmppropiedad.component';
 import { CmpOneComponent } from './components/usodecorator/cmp-one/cmp-one.component';
 import { CmpTwoComponent } from './components/usodecorator/cmp-two/cmp-two.component';
+import { LifecycleoneComponent } from './components/lifecycle/lifecycleone/lifecycleone.component';
+import { LifecycletwoComponent } from './components/lifecycle/lifecycletwo/lifecycletwo.component';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
@@ -27,7 +29,9 @@ import { CmpTwoComponent } from './components/usodecorator/cmp-two/cmp-two.compo
     MessageintComponent,
     CmppropiedadComponent,
     CmpOneComponent,
-    CmpTwoComponent
+    CmpTwoComponent,
+    LifecycleoneComponent,
+    LifecycletwoComponent
   ],
   exports: [], // declaraciones que son visibles para componentes de otros modulos
   imports: [ // clases que otros modulos exportan para utilizarlas en el modulo actual

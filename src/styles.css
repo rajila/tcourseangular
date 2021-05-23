@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.contentinternal {
+    border: 2px solid skyblue;
+    padding: 5px;
+    margin: 10px 0px 10px 0px;
+}

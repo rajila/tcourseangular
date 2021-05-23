@@ -6,13 +6,16 @@ import { MessageextComponent } from './components/comunicationII/messageext/mess
 import { EmisorComponent } from './components/comunicationIII/emisor/emisor.component';
 import { CmppropiedadComponent } from './components/cmppropiedad/cmppropiedad.component';
 import { CmpOneComponent } from './components/usodecorator/cmp-one/cmp-one.component';
+import { LifecycleoneComponent } from './components/lifecycle/lifecycleone/lifecycleone.component';
 
 const routes: Routes = [
   { path: 'father', component: FatherComponent },
   { path: 'msnext', component: MessageextComponent },
   { path: 'emisor', component: EmisorComponent},
   { path: 'cpropiedades', component: CmppropiedadComponent},
-  { path: 'usodecorator', component: CmpOneComponent}
+  { path: 'usodecorator', component: CmpOneComponent},
+  { path: 'lifecycle', component: LifecycleoneComponent}
+
 ];
 
 @NgModule({
