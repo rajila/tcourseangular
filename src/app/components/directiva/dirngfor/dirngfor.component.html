@@ -1,0 +1,9 @@
+<p>dirngfor works!</p>
+Número de estudiantes: {{ lNotes.length }}
+<section class="contentinternal">
+    <ol>
+        <li *ngFor="let note of lNotes">
+            <span class="negrita">Nombre: </span> {{note.name}} -- <span class="negrita">Nota: </span> {{note.note}}
+        </li>
+    </ol>
+</section>
