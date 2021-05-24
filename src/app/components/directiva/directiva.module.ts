@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { DirectivaRoutingModule } from './directiva-routing.module';
 import { DirngclassComponent } from './dirngclass/dirngclass.component';
+import { DirngifComponent } from './dirngif/dirngif.component';
 
 
 @NgModule({
   declarations: [
-    DirngclassComponent
+    DirngclassComponent,
+    DirngifComponent
   ],
   imports: [
     CommonModule,
