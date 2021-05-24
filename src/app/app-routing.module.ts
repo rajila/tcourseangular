@@ -7,6 +7,7 @@ import { EmisorComponent } from './components/comunicationIII/emisor/emisor.comp
 import { CmppropiedadComponent } from './components/cmppropiedad/cmppropiedad.component';
 import { CmpOneComponent } from './components/usodecorator/cmp-one/cmp-one.component';
 import { LifecycleoneComponent } from './components/lifecycle/lifecycleone/lifecycleone.component';
+import { CallserviceoneComponent } from './components/callservice/callserviceone/callserviceone.component';
 
 const routes: Routes = [
   { path: 'father', component: FatherComponent },
@@ -14,8 +15,8 @@ const routes: Routes = [
   { path: 'emisor', component: EmisorComponent},
   { path: 'cpropiedades', component: CmppropiedadComponent},
   { path: 'usodecorator', component: CmpOneComponent},
-  { path: 'lifecycle', component: LifecycleoneComponent}
-
+  { path: 'lifecycle', component: LifecycleoneComponent},
+  { path: 'serviceone', component: CallserviceoneComponent}
 ];
 
 @NgModule({

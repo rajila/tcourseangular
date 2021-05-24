@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser'; // Para renderizar la app en el navegador
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // Components
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { CmpOneComponent } from './components/usodecorator/cmp-one/cmp-one.compo
 import { CmpTwoComponent } from './components/usodecorator/cmp-two/cmp-two.component';
 import { LifecycleoneComponent } from './components/lifecycle/lifecycleone/lifecycleone.component';
 import { LifecycletwoComponent } from './components/lifecycle/lifecycletwo/lifecycletwo.component';
+import { CallserviceModule } from './components/callservice/callservice.module';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
@@ -35,7 +37,7 @@ import { LifecycletwoComponent } from './components/lifecycle/lifecycletwo/lifec
   ],
   exports: [], // declaraciones que son visibles para componentes de otros modulos
   imports: [ // clases que otros modulos exportan para utilizarlas en el modulo actual
-    BrowserModule, AppRoutingModule, ComunicatonthreeModule, FormsModule
+    BrowserModule, AppRoutingModule, HttpClientModule, ComunicatonthreeModule, FormsModule, CallserviceModule
   ],
   providers: [], // servicios usados de forma global y accesibles desde cualquier parte de la app
   bootstrap: [AppComponent] // vista principal del app. Solo es definida por el modulo principal
