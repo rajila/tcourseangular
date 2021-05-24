@@ -42,5 +42,8 @@
 # Add Module: Elemento que permite agrupar componentes, servicios, directivas, para una app
 	ng generate module <name_module>
 
+# create module y routing
+	ng generate module components/directiva --module=app --routing
+
 --flat: permite crear elemento sin directorio
 --mdodule: indica donde se debe importar el modulo creado

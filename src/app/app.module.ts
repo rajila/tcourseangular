@@ -20,6 +20,7 @@ import { CmpTwoComponent } from './components/usodecorator/cmp-two/cmp-two.compo
 import { LifecycleoneComponent } from './components/lifecycle/lifecycleone/lifecycleone.component';
 import { LifecycletwoComponent } from './components/lifecycle/lifecycletwo/lifecycletwo.component';
 import { CallserviceModule } from './components/callservice/callservice.module';
+import { DirectivaModule } from './components/directiva/directiva.module';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
@@ -37,7 +38,13 @@ import { CallserviceModule } from './components/callservice/callservice.module';
   ],
   exports: [], // declaraciones que son visibles para componentes de otros modulos
   imports: [ // clases que otros modulos exportan para utilizarlas en el modulo actual
-    BrowserModule, AppRoutingModule, HttpClientModule, ComunicatonthreeModule, FormsModule, CallserviceModule
+    BrowserModule, 
+    AppRoutingModule, 
+    HttpClientModule, 
+    ComunicatonthreeModule, 
+    FormsModule, 
+    CallserviceModule, 
+    DirectivaModule
   ],
   providers: [], // servicios usados de forma global y accesibles desde cualquier parte de la app
   bootstrap: [AppComponent] // vista principal del app. Solo es definida por el modulo principal

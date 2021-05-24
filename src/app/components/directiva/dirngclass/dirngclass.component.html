@@ -1,0 +1,10 @@
+<p>dirngclass works!</p>
+<section class="contentinternal">
+    <input type="checkbox" (change)="fondo = !fondo" /> Fondo -> {{ fondo }} <br />
+    <input type="checkbox" (change)="letra = !letra" /> Letra -> {{ letra }} <br />
+    <section class="contentinternal" [ngClass]="updateClass()">
+        Un valiente joven con poderes increíbles se aventura hacia un viaje místico en tierras exóticas 
+        llenas de guerreros nobles, princesas hermosas, monstruos mutantes, extraterrestres y 
+        crueles ejércitos.
+    </section>
+</section>
