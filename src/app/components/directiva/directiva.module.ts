@@ -5,13 +5,15 @@ import { DirectivaRoutingModule } from './directiva-routing.module';
 import { DirngclassComponent } from './dirngclass/dirngclass.component';
 import { DirngifComponent } from './dirngif/dirngif.component';
 import { DirngforComponent } from './dirngfor/dirngfor.component';
+import { DirngswitchComponent } from './dirngswitch/dirngswitch.component';
 
 
 @NgModule({
   declarations: [
     DirngclassComponent,
     DirngifComponent,
-    DirngforComponent
+    DirngforComponent,
+    DirngswitchComponent
   ],
   imports: [
     CommonModule,
