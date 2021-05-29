@@ -4,6 +4,6 @@
         "node_modules{,/**}",
         ".vscode{,/**}"
     ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/7395d921-da6c-4755-a8d2-f8cc81e0cfff/resourceGroups/ProyectoNode/providers/Microsoft.Web/sites/apironald",
-    "appService.deploySubpath": "."
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/7395d921-da6c-4755-a8d2-f8cc81e0cfff/resourceGroups/ProyectoNode/providers/Microsoft.Web/sites/angularonald"
 }
