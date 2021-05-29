@@ -21,6 +21,7 @@ import { LifecycleoneComponent } from './components/lifecycle/lifecycleone/lifec
 import { LifecycletwoComponent } from './components/lifecycle/lifecycletwo/lifecycletwo.component';
 import { CallserviceModule } from './components/callservice/callservice.module';
 import { DirectivaModule } from './components/directiva/directiva.module';
+import { UsejsextModule } from './components/usejsext/usejsext.module';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
@@ -44,7 +45,7 @@ import { DirectivaModule } from './components/directiva/directiva.module';
     ComunicatonthreeModule, 
     FormsModule, 
     CallserviceModule, 
-    DirectivaModule
+    DirectivaModule, UsejsextModule
   ],
   providers: [], // servicios usados de forma global y accesibles desde cualquier parte de la app
   bootstrap: [AppComponent] // vista principal del app. Solo es definida por el modulo principal

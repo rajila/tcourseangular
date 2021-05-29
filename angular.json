@@ -26,7 +26,14 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              {
+                "input": "src/assets/js/util.js",
+                "inject": true,
+                "bundleName": "util"
+              }
+            ]
           },
           "configurations": {
             "production": {
