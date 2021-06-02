@@ -2,8 +2,11 @@
 Número de estudiantes: {{ lNotes.length }}
 <section class="contentinternal">
     <ol>
-        <li *ngFor="let note of lNotes">
+        <li *ngFor="let note of lNotes; let i = index; trackBy: preProcessNote;">
             <span class="negrita">Nombre: </span> {{note.name}} -- <span class="negrita">Nota: </span> {{note.note}}
+            <p>
+                <!-- {{ getDataCustom(note.name) }} -->
+            </p>
         </li>
     </ol>
 </section>
