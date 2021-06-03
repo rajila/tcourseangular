@@ -1,0 +1,16 @@
+.red {
+    background-color: rgb(253, 186, 186);
+}
+
+.green {
+    background-color: rgb(135, 233, 135);
+}
+
+.blue {
+    background-color: rgb(100, 205, 236);
+}
+
+ol li {
+    border:1px solid rgb(163, 175, 179);
+    margin-bottom: 10px;
+}
