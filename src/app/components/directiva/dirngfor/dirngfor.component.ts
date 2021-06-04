@@ -11,9 +11,6 @@ import { Component, Input, OnInit } from '@angular/core';
         style({ backgroundColor: 'rgb(135, 233, 135)', height: 0}),
         animate(2000, style({ height: '*'} ))
       ]),
-      // transition(':leave',[
-      //   animate(1000, style({ backgroundColor: 'red', height: 0} ))
-      // ])
     ])
   ]
 })
@@ -32,7 +29,6 @@ export class DirngforComponent implements OnInit {
   }
 
   ngOnChanges(): void {
-    console.log('11')
     if (!this.lNotes) this.lNotes = new Array(); // Asignar value de inicio al parametro de entrada
   }
 
@@ -44,15 +40,8 @@ export class DirngforComponent implements OnInit {
     this.lNotes.push({id: 5, name: 'Isabella', note: 10});
   }
 
-  // No preprocesar la información de esta manera ya que se invoca el metodo 2 veces el *ngFor
-  getDataCustom(name: string): string {
-    console.error(name);
-    return 'Hi ' + name + '. What is up?';
-  }
-
   // Para no cargar toda la información si no hay cambios relevantes
   trackByFn(index: number, note: any): number {
-    console.error(note);
     return note.id;
   }
 
