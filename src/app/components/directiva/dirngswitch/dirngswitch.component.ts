@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirngswitchComponent implements OnInit {
 
-  constructor() { }
+  public option: string;
+
+  constructor() { 
+    this.option = 'NA';
+  }
 
   ngOnInit(): void {
   }
-
 }

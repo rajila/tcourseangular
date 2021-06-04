@@ -1,1 +1,26 @@
 <p>dirngswitch works!</p>
+<section class="contentinternal">
+    <input type="button" value="A" (click)="option='A'" /> |
+    <input type="button" value="B" (click)="option='B'" /> |
+    <input type="button" value="C" (click)="option='C'" /> |
+    <input type="button" value="Reset" (click)="option='NA'" />
+</section>
+<section class="contentinternal">
+    Se ha selaccionado la option: {{ option }}
+    <section [ngSwitch]="option">
+        <p *ngSwitchCase="'A'">
+            AAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAA
+        </p>
+        <p *ngSwitchCase="'B'">
+            BBBBBBBBBBBBBBBBBB BBBBBBBBBBBBBBBBBBB
+        </p>
+        <p *ngSwitchCase="'C'">
+            CCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCCCCC
+        </p>
+        <p *ngSwitchDefault>
+            <ng-container *ngTemplateOutlet="noOption"></ng-container>
+        </p>
+    </section>
+</section>
+
+<ng-template #noOption>NANANANANANANA NANANANANANANA</ng-template>
