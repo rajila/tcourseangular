@@ -1,0 +1,14 @@
+.box-one {
+    border-top: 10px solid blue;
+    border-bottom: 5px solid red;
+    height: 120px;
+    width: 70%;
+}
+
+.box-two {
+    border-top: 10px solid green;
+    height: 100px;
+    width: 70%;
+    background-color: #58fa58;
+    text-align: center;
+}

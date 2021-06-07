@@ -1,0 +1,13 @@
+<p>dirngstyle works!</p>
+<section class="contentinternal" [ngStyle]="{'color': color, 'font-weight': 'bold', 'font-size': '150%'}">
+    Hi from Angular. Using directiva ngStyle
+</section>
+<section class="contentinternal box-one">
+    <input type="checkbox" [(ngModel)]="fontBig" /> Tamaño <br />
+    <input type="checkbox" [(ngModel)]="backgroundColor" /> Fondo <br />
+    <input type="checkbox" [(ngModel)]="fontColor" /> Color <br />
+    <input type="checkbox" [(ngModel)]="fontItalic" /> Italica <br />
+</section>
+<section class="contentinternal box-two" [ngStyle]="setStyles()">
+    Hi from Angular. Changes of styles.
+</section>

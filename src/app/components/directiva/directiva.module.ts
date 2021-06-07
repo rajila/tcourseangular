@@ -9,6 +9,7 @@ import { DirngforComponent } from './dirngfor/dirngfor.component';
 import { DirngswitchComponent } from './dirngswitch/dirngswitch.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DirngmodelComponent } from './dirngmodel/dirngmodel.component';
+import { DirngstyleComponent } from './dirngstyle/dirngstyle.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DirngmodelComponent } from './dirngmodel/dirngmodel.component';
     DirngifComponent,
     DirngforComponent,
     DirngswitchComponent,
-    DirngmodelComponent
+    DirngmodelComponent,
+    DirngstyleComponent
   ],
   imports: [
     CommonModule,
