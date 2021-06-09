@@ -8,6 +8,7 @@ import { DirngforComponent } from './dirngfor/dirngfor.component';
 import { DirngswitchComponent } from './dirngswitch/dirngswitch.component';
 import { DirngmodelComponent } from './dirngmodel/dirngmodel.component';
 import { DirngstyleComponent } from './dirngstyle/dirngstyle.component';
+import { AnydirngComponent } from './anydirng/anydirng.component';
 
 const routes: Routes = [
   { path: 'ngclass', component: DirngclassComponent },
@@ -16,7 +17,7 @@ const routes: Routes = [
   { path: 'ngswitch', component: DirngswitchComponent},
   { path: 'ngmodel', component: DirngmodelComponent},
   { path: 'ngstyle', component: DirngstyleComponent},
-
+  { path: 'anyng', component: AnydirngComponent},
 ];
 
 @NgModule({

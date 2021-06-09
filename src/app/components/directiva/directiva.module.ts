@@ -10,6 +10,7 @@ import { DirngswitchComponent } from './dirngswitch/dirngswitch.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DirngmodelComponent } from './dirngmodel/dirngmodel.component';
 import { DirngstyleComponent } from './dirngstyle/dirngstyle.component';
+import { AnydirngComponent } from './anydirng/anydirng.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { DirngstyleComponent } from './dirngstyle/dirngstyle.component';
     DirngforComponent,
     DirngswitchComponent,
     DirngmodelComponent,
-    DirngstyleComponent
+    DirngstyleComponent,
+    AnydirngComponent
   ],
   imports: [
     CommonModule,
