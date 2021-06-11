@@ -1,0 +1,67 @@
+<p>tpipe works!</p>
+<section class="contentinternal">
+    <p>
+        <strong>Fecha SIN pipe:</strong> {{ dateCurrent }}
+    </p>
+    <p>
+        <strong>Fecha CON pipe:</strong> {{ dateCurrent | date }}
+    </p>
+</section>
+<section class="contentinternal">
+    <strong>Format:</strong> {{ formatDate }}
+    <p>
+        <strong>Fecha CON pipe:</strong> {{ dateCurrent | date:formatDate | uppercase }}
+    </p>
+    <input type="button" value="Change Format date" (click)="changeFormatDate();" />
+</section>
+<section class="contentinternal">
+    <p>
+        <strong ngNonBindable>{{ title }}: </strong> {{ title }}
+    </p>
+    <p>
+        <strong ngNonBindable>{{ title }}: </strong> {{ title | pipeuppercase }}
+    </p>
+    <p>
+        <strong ngNonBindable>{{ title }}: </strong> {{ title | pipeimpuppercase }}
+    </p>
+    <input type="button" value="Change data" (click)="changeData();" /> | 
+    <input type="button" value="Reset data" (click)="resetTitle();" />
+</section>
+<section class="contentinternal">
+    <h3>Some explamples: Date</h3>
+    <p>
+        <strong ngNonBindable>{{ dateCurrent }}: </strong> {{ dateCurrent }}
+    </p>
+    <p>
+        <strong ngNonBindable>{{ dateCurrent | date | uppercase }}:</strong> {{ dateCurrent | date | uppercase }}
+    </p>
+    <p>
+        <strong ngNonBindable>{{ dateCurrent | date:'medium' | lowercase }}:</strong> {{ dateCurrent | date:'medium' | lowercase }}
+    </p>
+    <p>
+        <strong ngNonBindable>{{ dateCurrent | date:'d/M/y HH:mm:ss' }}:</strong> {{ dateCurrent | date:'d/M/y HH:mm:ss' }}
+    </p>
+</section>
+<section class="contentinternal">
+    <h3>Some explamples: Number</h3>
+    <p>
+        <strong ngNonBindable>{{ pi }}: </strong> {{ pi }}
+    </p>
+    <p>
+        <strong ngNonBindable>{{ pi | currency:'EUR':'symbol':'4.3-3':'es' }}:</strong> {{ pi | currency:'EUR':'symbol':'4.3-3':'es' }}
+    </p>
+    <p>
+        <strong ngNonBindable>{{ pi | percent }}:</strong> {{ pi | percent }}
+    </p>
+    <p>
+        <strong ngNonBindable>{{ pi | percent:'4.3-3' }}:</strong> {{ pi | percent:'4.3-3' }}
+    </p>
+</section>
+<section class="contentinternal">
+    <h3>Pipe Custom</h3>
+    <strong>Dividendo: </strong> {{ dividendo }}<br/>
+    <strong>Divisor: </strong> {{ divisior }}
+    <p>
+        <strong ngNonBindable>{{ dividendo | pipediventera:divisior }}: </strong> {{ dividendo | pipediventera:divisior }}
+    </p>
+</section>
