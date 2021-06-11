@@ -23,6 +23,7 @@ import { CallserviceModule } from './components/callservice/callservice.module';
 import { DirectivaModule } from './components/directiva/directiva.module';
 import { UsejsextModule } from './components/usejsext/usejsext.module';
 import { PipeModule } from './pipe/pipe.module';
+import { CmpasyncModule } from './components/cmpasync/cmpasync.module';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
@@ -36,7 +37,7 @@ import { PipeModule } from './pipe/pipe.module';
     CmpOneComponent,
     CmpTwoComponent,
     LifecycleoneComponent,
-    LifecycletwoComponent
+    LifecycletwoComponent,
   ],
   exports: [], // declaraciones que son visibles para componentes de otros modulos
   imports: [ // clases que otros modulos exportan para utilizarlas en el modulo actual
@@ -46,7 +47,7 @@ import { PipeModule } from './pipe/pipe.module';
     ComunicatonthreeModule, 
     FormsModule, 
     CallserviceModule, 
-    DirectivaModule, UsejsextModule, PipeModule
+    DirectivaModule, UsejsextModule, PipeModule, CmpasyncModule
   ],
   providers: [], // servicios usados de forma global y accesibles desde cualquier parte de la app
   bootstrap: [AppComponent] // vista principal del app. Solo es definida por el modulo principal
