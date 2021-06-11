@@ -24,6 +24,7 @@ import { DirectivaModule } from './components/directiva/directiva.module';
 import { UsejsextModule } from './components/usejsext/usejsext.module';
 import { PipeModule } from './pipe/pipe.module';
 import { CmpasyncModule } from './components/cmpasync/cmpasync.module';
+import { ModeldataModule } from './components/modeldata/modeldata.module';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
@@ -47,7 +48,7 @@ import { CmpasyncModule } from './components/cmpasync/cmpasync.module';
     ComunicatonthreeModule, 
     FormsModule, 
     CallserviceModule, 
-    DirectivaModule, UsejsextModule, PipeModule, CmpasyncModule
+    DirectivaModule, UsejsextModule, PipeModule, CmpasyncModule, ModeldataModule
   ],
   providers: [], // servicios usados de forma global y accesibles desde cualquier parte de la app
   bootstrap: [AppComponent] // vista principal del app. Solo es definida por el modulo principal
