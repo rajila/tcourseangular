@@ -14,8 +14,8 @@ export class PipejsonComponent implements OnInit {
   public writerRonal: Writer;
 
   constructor() { 
-    this.bookMath = new Book('Matematicas basicas', 'cientifica');
-    this.bookChe = new Book('Farmacias I', 'Medicina');
+    this.bookMath = new Book(1,'Matematicas basicas', 'cientifica');
+    this.bookChe = new Book(2, 'Farmacias I', 'Medicina');
     this.writerRonal = new Writer(1, 'Ronald', new Date(), [this.bookMath, this.bookChe]);
   }
 
