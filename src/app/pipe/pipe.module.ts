@@ -6,6 +6,7 @@ import { TpipeComponent } from './tpipe/tpipe.component';
 import { PipediventeraPipe } from './pipe/pipediventera.pipe';
 import { PipeuppercasePipe } from './pipe/pipeuppercase.pipe';
 import { PipeimpuppercasePipe } from './pipe/pipeimpuppercase.pipe';
+import { PipeasyncComponent } from './pipeasync/pipeasync.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { PipeimpuppercasePipe } from './pipe/pipeimpuppercase.pipe';
     PipediventeraPipe,
     PipeuppercasePipe,
     PipeimpuppercasePipe,
+    PipeasyncComponent,
   ],
   imports: [
     CommonModule,
