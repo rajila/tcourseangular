@@ -9,6 +9,7 @@ import { CmpOneComponent } from './components/usodecorator/cmp-one/cmp-one.compo
 import { LifecycleoneComponent } from './components/lifecycle/lifecycleone/lifecycleone.component';
 import { CallserviceoneComponent } from './components/callservice/callserviceone/callserviceone.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 const routes: Routes = [
   { path: 'father', component: FatherComponent },
@@ -18,7 +19,9 @@ const routes: Routes = [
   { path: 'usodecorator', component: CmpOneComponent},
   { path: 'lifecycle', component: LifecycleoneComponent},
   { path: 'serviceone', component: CallserviceoneComponent},
-  { path: 'databinding', component: DatabindingComponent}
+  { path: 'databinding', component: DatabindingComponent},
+  { path: '', redirectTo: '/databinding', pathMatch: 'full'},
+  { path: '**', component: NotfoundComponent},
 ];
 
 @NgModule({

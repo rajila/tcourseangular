@@ -26,6 +26,7 @@ import { PipeModule } from './pipe/pipe.module';
 import { CmpasyncModule } from './components/cmpasync/cmpasync.module';
 import { ModeldataModule } from './components/modeldata/modeldata.module';
 import { DatabindingComponent } from './components/databinding/databinding.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
@@ -41,6 +42,7 @@ import { DatabindingComponent } from './components/databinding/databinding.compo
     LifecycleoneComponent,
     LifecycletwoComponent,
     DatabindingComponent,
+    NotfoundComponent,
   ],
   exports: [], // declaraciones que son visibles para componentes de otros modulos
   imports: [ // clases que otros modulos exportan para utilizarlas en el modulo actual
