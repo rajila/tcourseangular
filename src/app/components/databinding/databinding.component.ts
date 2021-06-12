@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatabindingComponent implements OnInit {
 
+  public stateCantidad: boolean;
+
   public book: any;
 
   constructor() { 
@@ -17,6 +19,7 @@ export class DatabindingComponent implements OnInit {
                   cantidad: 0,
                   imagen: 'assets/bookAngular.jpg'
                 };
+    this.stateCantidad = this.updateStateCantidad();
   }
 
   ngOnInit(): void {
@@ -24,13 +27,25 @@ export class DatabindingComponent implements OnInit {
 
   downCantidad(): void {
     if (this.book.cantidad > 0) this.book.cantidad--;
+    this.updateStateCantidad();
   }
 
   upCantidad(): void {
     if (this.book.cantidad < this.book.stock) this.book.cantidad++;
+    this.updateStateCantidad();
   }
 
   getCoordenadas(event:any): void {
     console.error(event.clientX, event.clientY);
+  }
+
+  eventKeyup(event: any): void{
+    if (this.book.cantidad > this.book.stock) this.book.cantidad = this.book.stock;
+    else if (this.book.cantidad < 0) this.book.cantidad = 0;
+    this.updateStateCantidad();
+  }
+
+  updateStateCantidad(): boolean {
+    return this.stateCantidad = this.book.cantidad >= this.book.stock || this.book.cantidad < 0;
   }
 }

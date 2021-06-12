@@ -57,3 +57,12 @@ en la forma que uyen los datos. Y, par
 *   Two Way Data Binding (del componente al DOM y viceversa): FormsModule
     y [(ngModel)].
 
+    Hay ciertas situaciones en las que necesitaremos comunicación
+    entre componente y DOM en los dos sentidos
+    al mismo tiempo. Por ejemplo, este sería el caso
+    de un elemento “input” del DOM. Por una parte, necesitaríamos
+    que se actualizara con el valor de una determinada
+    propiedad del componente y, por la otra,
+    necesitaríamos que escuchara eventos (introducción
+    de datos por parte del usuario) actualizando el valor de
+    esa propiedad.
