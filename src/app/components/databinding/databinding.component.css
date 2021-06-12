@@ -1,0 +1,9 @@
+.img-book {
+    width: 300px;
+    height: 400px;
+    border: 1px dashed rgb(9, 9, 77);
+}
+
+.aviso {
+    color: red;
+}

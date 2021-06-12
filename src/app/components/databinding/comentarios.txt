@@ -1,0 +1,27 @@
+Cuando un navegador web carga un documento (vista),
+genera una estructura de objetos que llamamos
+DOM. El DOM puede alterarse mediante JavaScript
+para cambiar dinámicamente los contenidos y el aspecto
+de la página.
+El Data Binding es un concepto primordial en Angular.
+Permite denir la comunicación entre un componente
+y el DOM, lo que hace que sea muy fácil denir aplicaciones
+interactivas sin preocuparnos de la actualización
+de datos en DOM (push) o la obtención de datos
+desde el DOM (pull).
+Hay tres tipos distintos de Data Binding que dieren
+en la forma que uyen los datos. Y, par
+
+*   One Way Data Binding (del componente al DOM): Interpolación,
+    Property Binding y Class Binding.
+    
+    La interpolación es la forma más sencilla de visualizar propiedades de un
+    componente en su template. Solamente hace falta poner el nombre de la
+    propiedad entre {{ … }} en el template.
+
+*   One Way Data Binding (del DOM al componente): Event Binding y
+    $event.
+
+*   Two Way Data Binding (del componente al DOM y viceversa): FormsModule
+    y [(ngModel)].
+

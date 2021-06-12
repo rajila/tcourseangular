@@ -25,6 +25,7 @@ import { UsejsextModule } from './components/usejsext/usejsext.module';
 import { PipeModule } from './pipe/pipe.module';
 import { CmpasyncModule } from './components/cmpasync/cmpasync.module';
 import { ModeldataModule } from './components/modeldata/modeldata.module';
+import { DatabindingComponent } from './components/databinding/databinding.component';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
@@ -39,6 +40,7 @@ import { ModeldataModule } from './components/modeldata/modeldata.module';
     CmpTwoComponent,
     LifecycleoneComponent,
     LifecycletwoComponent,
+    DatabindingComponent,
   ],
   exports: [], // declaraciones que son visibles para componentes de otros modulos
   imports: [ // clases que otros modulos exportan para utilizarlas en el modulo actual
