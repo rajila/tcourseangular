@@ -47,12 +47,16 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
   exports: [], // declaraciones que son visibles para componentes de otros modulos
   imports: [ // clases que otros modulos exportan para utilizarlas en el modulo actual
     BrowserModule, 
-    AppRoutingModule, 
     HttpClientModule, 
     ComunicatonthreeModule, 
     FormsModule, 
     CallserviceModule, 
-    DirectivaModule, UsejsextModule, PipeModule, CmpasyncModule, ModeldataModule
+    DirectivaModule, 
+    UsejsextModule, 
+    PipeModule, 
+    CmpasyncModule, 
+    ModeldataModule,
+    AppRoutingModule, // Debe ir al final
   ],
   providers: [], // servicios usados de forma global y accesibles desde cualquier parte de la app
   bootstrap: [AppComponent] // vista principal del app. Solo es definida por el modulo principal
