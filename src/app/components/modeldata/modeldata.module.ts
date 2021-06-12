@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { ModeldataRoutingModule } from './modeldata-routing.module';
 import { TmodeloneComponent } from './tmodelone/tmodelone.component';
+import { TmodeltwoComponent } from './tmodeltwo/tmodeltwo.component';
 
 
 @NgModule({
   declarations: [
-    TmodeloneComponent
+    TmodeloneComponent,
+    TmodeltwoComponent
   ],
   imports: [
     CommonModule,

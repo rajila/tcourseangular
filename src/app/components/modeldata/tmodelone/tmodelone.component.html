@@ -2,7 +2,7 @@
 <section class="contentinternal">
     <ol>
         <li *ngFor="let book of lbooks;">
-            {{ book.title | uppercase }}
+            {{ book.title | uppercase }} | <a [routerLink]="['/modelone', book.id]">Detalle</a>
         </li>
     </ol>
 </section>
