@@ -15,3 +15,9 @@
         <strong>Precio: </strong>{{ book.precio | currency:'EUR':'symbol' }}
     </p>
 </section>
+<section class="contentinternal" (mousemove)="getCoordenadas($event);">
+    <h2>Event Binding y $event</h2>
+    <button [disabled]="book.cantidad <= 0" (click)="downCantidad();">-</button>
+    {{ book.cantidad }}
+    <button [disabled]="book.cantidad >= book.stock" (click)="upCantidad();">+</button>
+</section>

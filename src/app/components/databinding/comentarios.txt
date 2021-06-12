@@ -19,8 +19,40 @@ en la forma que uyen los datos. Y, par
     componente en su template. Solamente hace falta poner el nombre de la
     propiedad entre {{ … }} en el template.
 
+    Cuando necesitemos enlazar propiedades de componente a propiedades de
+    elementos del DOM podemos usar Property Binding como alternativa
+    a la interpolación (que también podría usarse en estos casos). Para usarlo
+    pondremos la propiedad del elemento del DOM entre “[…]” asignándole la
+    propiedad del componente.
+
 *   One Way Data Binding (del DOM al componente): Event Binding y
     $event.
+
+    En este ejercicio analizaremos los mecanismos que
+    ofrece Angular para el envío de datos del DOM al componente:
+    Event Binding y $event. Son mecanismos de
+    comunicación de un solo sentido, de la vista al componente,
+    por eso los llamamos mecanismos de One Way Data Binding.
+
+    Event Binding: 
+        nos permite capturar cualquier evento
+        estándar del DOM (hacer clic en un botón, pasar el
+        ratón por encima de determinado elemento, etc.) y
+        transmitirlo al componente para que realice las acciones
+        que convengan. Para hacer uso de Event Binding
+        simplemente pondremos el evento que queramos controlar
+        entre paréntesis y sin “on” de delante, y lo asignaremos
+        a una función del componente.
+    
+    $event:
+        Algunas veces necesitaremos información adicional en relación al evento que estamos
+        controlando, por lo que necesitaremos tener acceso al objeto event que se haya producido.
+        Este procedimiento lo haremos pasando el objeto event al método de nuestro
+        componente con $event.
+
+        Finalmente, para ver un ejemplo de uso de $event junto a Event Binding,
+        capturaremos el evento de movimiento de ratón sobre la imagen e indicaremos
+        por log en qué posición se encuentra el ratón
 
 *   Two Way Data Binding (del componente al DOM y viceversa): FormsModule
     y [(ngModel)].

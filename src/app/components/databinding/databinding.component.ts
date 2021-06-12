@@ -21,4 +21,16 @@ export class DatabindingComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  downCantidad(): void {
+    if (this.book.cantidad > 0) this.book.cantidad--;
+  }
+
+  upCantidad(): void {
+    if (this.book.cantidad < this.book.stock) this.book.cantidad++;
+  }
+
+  getCoordenadas(event:any): void {
+    console.error(event.clientX, event.clientY);
+  }
 }
