@@ -5,6 +5,7 @@ import { ModeldataRoutingModule } from './modeldata-routing.module';
 import { TmodeloneComponent } from './tmodelone/tmodelone.component';
 import { TmodeltwoComponent } from './tmodeltwo/tmodeltwo.component';
 import { TmodelthreeComponent } from './tmodelthree/tmodelthree.component';
+import { BookService } from '../../service/book.service';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { TmodelthreeComponent } from './tmodelthree/tmodelthree.component';
   imports: [
     CommonModule,
     ModeldataRoutingModule
-  ]
+  ],
+  providers: [BookService]
 })
 export class ModeldataModule { }

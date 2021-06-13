@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book';
-import { Util } from '../../../util/util';
+import { BookService } from 'src/app/service/book.service';
 
 @Component({
   selector: 'app-tmodelone',
   templateUrl: './tmodelone.component.html',
-  styleUrls: ['./tmodelone.component.css']
+  styleUrls: ['./tmodelone.component.css'],
+  providers: []
 })
 export class TmodeloneComponent implements OnInit {
 
   public lbooks: Array<Book>;
 
-  constructor() { 
-    this.lbooks = Util.Books;
+  constructor(private _bookService: BookService) { 
+    this.lbooks = _bookService.getBooks();
   }
 
   ngOnInit(): void {
