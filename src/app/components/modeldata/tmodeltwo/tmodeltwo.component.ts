@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { param } from 'jquery';
 
 import { Book } from 'src/app/models/book';
 import { Util } from '../../../util/util';
@@ -14,7 +13,7 @@ export class TmodeltwoComponent implements OnInit {
 
   public book!: Book;
 
-  constructor( private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
