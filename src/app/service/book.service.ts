@@ -10,4 +10,11 @@ export class BookService {
   getBooks(): Array<Book> {
     return Util.Books;
   }
+
+  // Get Books using Promise
+  getBooksPromise(): Promise<Array<Book>> {
+    return new Promise<Array<Book>>((resolve, reject) => {
+      setTimeout(() => {resolve(Util.Books);}, 10000);
+    });
+  }
 }
