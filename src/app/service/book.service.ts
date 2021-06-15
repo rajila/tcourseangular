@@ -33,14 +33,20 @@ export class BookService {
       setTimeout(() => {
         observer.complete(); // Indica que el Observable ha dejado de enviar datos
       }, (Util.Books.length + 1) * 2000);
-    });
+    }).pipe(map((data:any) => { // La lista se procesa en cada iteración
+      console.error('OneToOne', data);
+      return data;
+    }));
   }
 
   // Get Books using Observables: Send all books. Case two: Envia todos los libros
   getBookObservableAll(): Observable<Array<Book>> {
     return new Observable<Array<Book>>( observer => {
       setTimeout(() => { observer.next(Util.Books) }, 2000);
-    });
+    }).pipe(map((data:any) => { // En un solo objeto tiene una lista de datos
+      console.log('All', data);
+      return data;
+    }));
   }
 
   // Send numeros 0, 1, 2, 3, ... N cada 20seg
