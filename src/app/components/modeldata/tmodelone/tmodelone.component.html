@@ -1,8 +1,24 @@
 <p>tmodelone works!</p>
 <section class="contentinternal">
-    <p><strong>Número de libros: </strong> {{ dimBooks }}</p>
+    <p><strong>Número de libros (Using Promises): </strong> {{ dimBooks }}</p>
     <ol>
         <li *ngFor="let book of lbooks;">
+            {{ book.title | uppercase }} | <a [routerLink]="['/modelone', book.id]">Detalle</a>
+        </li>
+    </ol>
+</section>
+<section class="contentinternal">
+    <h3>Using Observables: get book one to one</h3>
+    <ol>
+        <li *ngFor="let book of lbooksOS;">
+            {{ book.title | uppercase }} | <a [routerLink]="['/modelone', book.id]">Detalle</a>
+        </li>
+    </ol>
+</section>
+<section class="contentinternal">
+    <h3>Using Observables: get all books</h3>
+    <ol>
+        <li *ngFor="let book of lbooksOSAll;">
             {{ book.title | uppercase }} | <a [routerLink]="['/modelone', book.id]">Detalle</a>
         </li>
     </ol>
