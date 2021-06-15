@@ -7,6 +7,7 @@ import { filter, map } from 'rxjs/operators';
 export class PostService {
   constructor(private http: HttpClient) { }
 
+  // Observable: tipo cold: solo realiza la petición si hay una suscripcion 
   getPostales(): Observable<any> {
     return this.http.get('https://jsonplaceholder.typicode.com/posts')
                     .pipe(map((data:any) => data.filter((el:any) => el.userId === 1)));
