@@ -20,6 +20,12 @@ export class TmodeloneComponent implements OnInit {
   public observableSubAll!: Subscription;
   public lbooksOSAll: Array<Book>;
 
+  public observableSubInterval!: Subscription;
+  public observableSubOf!: Subscription;
+  public observableSubFromPromise!: Subscription;
+  public observableSubFromArray!: Subscription;
+  public observableSubMap!: Subscription;
+
   constructor(private _bookService: BookService) { 
     this.lbooks = _bookService.getBooks(); // Obtiene los libros normalmente
     this.dimBooks = 0;
@@ -45,10 +51,36 @@ export class TmodeloneComponent implements OnInit {
       error => console.error(error),
       () => console.info('Finalización All Books')
     );
+
+    // Observable of type interval();
+    this.observableSubInterval = this._bookService.getObservableInterval().subscribe(
+      data => console.log('Nro: ' + data)
+    );
+
+    this.observableSubOf = this._bookService.getObservableOf().subscribe(
+      character => console.info('Character: ' + character)
+    );
+
+    this.observableSubFromPromise = this._bookService.getObservableFromPromise().subscribe(
+      txt => console.log('txt: ', txt)
+    );
+
+    this.observableSubFromArray = this._bookService.getObservableFromArray().subscribe(
+      dataO => console.log('dataO: ' + JSON.stringify(dataO))
+    );
+
+    this.observableSubMap = this._bookService.getObservableMap().subscribe(
+      el => console.log('Map: ', el)
+    );
   }
 
   ngOnDestroy(): void {
     if (this.observableSubOneToOne) this.observableSubOneToOne.unsubscribe();
     if (this.observableSubAll) this.observableSubAll.unsubscribe();
+    if (this.observableSubInterval) this.observableSubInterval.unsubscribe();
+    if (this.observableSubOf) this.observableSubOf.unsubscribe();
+    if (this.observableSubFromPromise) this.observableSubFromPromise.unsubscribe();
+    if (this.observableSubFromArray) this.observableSubFromArray.unsubscribe();
+    if (this.observableSubMap) this.observableSubMap.unsubscribe();
   }
 }
