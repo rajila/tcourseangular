@@ -1,8 +1,12 @@
 <p>modeldatahttp works!</p>
 <section class="contentinternal">
     <input type="button" value="GET" (click)="requestGetPostales();" /> | 
-    <input type="button" value="POST" (click)="requestPostPostales();" />
+    <input type="button" value="POST" (click)="requestPostPostales();" /> |
+    <input type="button" value="PUT" (click)="requestPutPostal();" /> |
+    <input type="button" value="PATCH" (click)="requestPatchPostal();" /> |
+    <input type="button" value="DELETE" (click)="requestDeletePostal();" />
 </section>
 <section class="contentinternal">
+    <h3>Resultado:</h3>
     <pre>{{ resultHttp | json }}</pre>
 </section>

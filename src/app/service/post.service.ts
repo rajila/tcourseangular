@@ -15,9 +15,32 @@ export class PostService {
 
   addPostales(title: string = 'Title default', body: string = 'Body default'): Observable<Object> {
     return this.http.post('https://jsonplaceholder.typicode.com/posts', 
-              { 'title': title, 
+              { 
+                'id': 1,
+                'title': title, 
                 'body': body,
                 'userId': 1
               });
+  }
+
+  updatePostal(title: string = 'Title Change', body: string = 'Body Change'): Observable<any> {
+    return this.http.put('https://jsonplaceholder.typicode.com/posts/1', 
+              { 
+                'id': 1,
+                'title': title, 
+                'body': body,
+                'userId': 1
+              });
+  }
+
+  updatePostalBody(body: string = 'Body Change Change'): Observable<any> {
+    return this.http.patch('https://jsonplaceholder.typicode.com/posts/1', 
+              { 
+                'body': body,
+              });
+  }
+
+  deletePostal(): Observable<any> {
+    return this.http.delete('https://jsonplaceholder.typicode.com/posts/1');
   }
 }

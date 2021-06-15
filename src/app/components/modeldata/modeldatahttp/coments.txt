@@ -1,0 +1,43 @@
+Una aplicación web puede dividirse en dos grandes
+bloques: Front-end y Back-end. El Front-end es la
+parte que se muestra a través del navegador web, o sea,
+la parte que se encarga de interactuar con el usuario
+para recoger datos e información. El Back-end, por su
+parte, se ejecuta en un servidor y recoge a través de
+una API de servicios toda esa información para gestionarla
+(guardarla en una base de datos, realizar comprobaciones,
+etc.).
+
+En la mayoría de casos, la comunicación entre aplicaciones Front-end y servicios
+Back-end se realiza mediante el protocolo HTTP. Para realizar este tipo de comunicación,
+las aplicaciones se apoyan en API como la interfaz XMLHttpRequest y
+la API fetch(), que son soportadas por la mayoría de navegadores web y permiten al
+Front-end realizar peticiones HTTP.
+
+Angular, por su parte, nos ofrece el servicio HttpClient. HttpClient es un servicio
+que proporciona una API simplicada, construida sobre la interfaz XMLHttpRequest,
+para realizar peticiones HTTP y procesar sus respuestas. En este sentido, el servicio
+ofrece toda una serie de métodos para realizar los distintos tipos de peticiones
+HTTP que existen:
+    * get:      Obtiene todos los registros
+    * post:     Crea un nuevo registro
+    * put:      Actualiza un registro
+    * delete:   Para eliminar un registro
+    * patch:    Cuando se actulaiza una propiedad (una parte) de un registro
+    * head
+    * jsonp
+
+Nota:
+    Los observables aquí explicados son los llamados cold observables, no emiten valores
+    hasta que un observador se suscribe a ellos. Sin embargo, también existen los hot
+    observables, que emiten valores aunque no haya suscriptores. Para más información
+    consulte: http://reactivex.io/rxjs/manual/overview.html.
+
+Analizando la sintaxis de la llamada, seguramente ya habrá intuido que tanto get()
+como post() devuelven un observable sobre el que realizamos una suscripción. Y
+así es. Este y el resto de métodos de HttpClient para realizar peticiones HTTP devuelven
+observables de tipo cold. Esto signica lo siguiente:
+    •   La petición no se realiza hasta que se hace una suscripción al observable
+        devuelto.
+    •   Cada suscripción implicará una petición nueva.
+

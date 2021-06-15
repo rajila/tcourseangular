@@ -23,4 +23,16 @@ export class ModeldatahttpComponent implements OnInit {
   requestPostPostales(): void {
     this.postService.addPostales().subscribe(data => this.resultHttp = data);
   }
+
+  requestPutPostal(): void {
+    this.postService.updatePostal().subscribe(data => this.resultHttp = data);
+  }
+
+  requestPatchPostal(): void {
+    this.postService.updatePostalBody().subscribe(data => this.resultHttp = data);
+  }
+
+  requestDeletePostal(): void {
+    this.postService.deletePostal().subscribe(data => this.resultHttp = data);
+  }
 }
