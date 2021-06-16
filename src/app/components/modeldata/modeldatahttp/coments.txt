@@ -41,3 +41,30 @@ observables de tipo cold. Esto signica lo siguiente:
         devuelto.
     •   Cada suscripción implicará una petición nueva.
 
+
+Con HttpClient, podemos realizar llamadas con parámetros usando la clase HttpParams.
+
+Añadir cabecera personalizada
+    En ciertos contextos necesitaremos añadir cabeceras personalizadas en nuestras peticiones
+    HTTP. Un claro ejemplo de ello se produce en determinados sistemas de seguridad.
+    En ellos, necesitaremos añadir una cabecera de autorización en todas las peticiones
+    HTTP que realicemos. En esa cabecera, añadiríamos un “token” (o password)
+    que permitiría al servidor remoto identicarnos para que este haga sus gestiones o
+    las deniegue.
+    Con HttpClient, podemos añadir cabeceras personalizadas usando la clase HttpHeaders.
+
+Leer la respuesta completa
+    Por defecto, los métodos de HttpClient solamente devuelven la parte que forma el
+    cuerpo (body) de la respuesta. Sin embargo, en algunos casos puede ser que nos
+    interese ver la respuesta entera para consultar la cabecera o algún código de estado.
+
+Gestión de errores
+    Los métodos de HttpClient devuelven observables, y tal como explicábamos en el
+    capítulo de los observables, la
+    gestión de errores se realizará añadiendo un controlador de error en la suscripción.
+
+    El error devuelto es de tipo HttpErrorResponse, y podemos obtener más detalles
+    de ese error accediendo a sus propiedades. Por otra parte, en una petición HTTP se
+    pueden producir dos grandes tipos de errores: error de cliente o red, o sea, error en
+    el canal de comunicación, y error devuelto por el servidor remoto. Es recomendable
+    que se gestionen por separado.

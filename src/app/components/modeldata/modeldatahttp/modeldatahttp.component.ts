@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 import { PostService } from '../../../service/post.service';
@@ -34,5 +35,27 @@ export class ModeldatahttpComponent implements OnInit {
 
   requestDeletePostal(): void {
     this.postService.deletePostal().subscribe(data => this.resultHttp = data);
+  }
+
+  requestGetWithParams(): void {
+    this.postService.getPostalesWithParams().subscribe(data => this.resultHttp = data);
+  }
+
+  requestGetWithTypePost(): void {
+    this.postService.getPostalesTypePost().subscribe(data => this.resultHttp = data);
+  }
+
+  requestGetAllResponseHttp(): void {
+    this.postService.getPostalesAllResponseHttp().subscribe(data => this.resultHttp = data);
+  }
+
+  requestGetERROR(): void {
+    this.postService.getERROR().subscribe(
+      data => this.resultHttp = data,
+      (error: HttpErrorResponse) => {
+        this.resultHttp = error;
+        if (error.error instanceof Error) console.error('Error cliente: ', error.error.message);
+        else console.error('Error servidor: ', error.status, error.message);
+      });
   }
 }
