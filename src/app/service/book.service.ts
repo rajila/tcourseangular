@@ -21,6 +21,21 @@ export class BookService {
     });
   }
 
+  // Example de encadenamiento de promesas
+  getDataPromiseEnCadena(data: number = 0): Promise<Array<number>> {
+    return new Promise<boolean>((resolve, reject) => {
+      let isPar = (data % 2 === 0) ? true : false;
+      setTimeout(() => { resolve(isPar) }, 5000);
+    })
+    .then((data:boolean) => (data) ? 'par' : 'impar')
+    .then((data:string) => {
+      let ldata: Array<number> = Array();
+      if (data === 'par') ldata = [2,4,6,8,10];
+      else ldata = [1,3,5,7,9];
+      return ldata;
+    });
+  }
+
   // Get Books using Observables: Book one to one. Case one: Envia libro, uno a uno
   getBookObservableOneToOne(): Observable<Book> {
     return new Observable<Book>( observer => {

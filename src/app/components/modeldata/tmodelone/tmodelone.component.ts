@@ -37,6 +37,9 @@ export class TmodeloneComponent implements OnInit {
     // Using Promises
     // then -> retorna otra promesa y poder realizar un encadenamiento de promesas
     this._bookService.getBooksPromise().then(data => this.dimBooks = data.length);
+
+    // Example ENCADENAMIENTO de PROMESAS
+    this._bookService.getDataPromiseEnCadena(2).then(data => console.info(data));
     
     // Using Observables: Recibe los libros de uno en uno
     this.observableSubOneToOne = this._bookService.getBookObservableOneToOne().subscribe(

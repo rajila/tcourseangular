@@ -1,0 +1,22 @@
+Promesas
+    Para mantener un buen nivel de uidez en nuestras aplicaciones,
+    siempre deberíamos trabajar con servicios asíncronos. Las promesas son una
+    buena herramienta para su implementación.
+
+    Las promesas es una de las herramientas que nos permite
+    la programación asíncrona. Tal como su nombre indica, una promesa la podríamos
+    denir como un valor que se espera en un tiempo futuro no denido después
+    de ejecutar, de forma asíncrona, una operación.
+
+    La función ejecutor empieza a ejecutarse de forma asíncrona justo en el momento
+    en el que se crea la promesa. La función ejecutor, al terminar, deberá llamar a la
+    función resolver para resolver la promesa con el valor obtenido, o llamar a la función
+    rechazar para rechazarla con el error producido. Finalmente, mediante los
+    métodos “then” y “catch” de la promesa, gestionaremos esa resolución y rechazo,
+    respectivamente.
+
+    Una llamada al método “then” de una promesa devuelve otra promesa a la que también
+    podemos llamar a su método “then”, y así sucesivamente. Esto nos permitirá
+    ENCADENAR PROMESAS.
+
+    
