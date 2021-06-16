@@ -19,4 +19,57 @@ Promesas
     podemos llamar a su método “then”, y así sucesivamente. Esto nos permitirá
     ENCADENAR PROMESAS.
 
+Observables
+    Los observables de las librerías RxJS (reactive extensions
+    for JavaScript) son otra herramienta que nos
+    permitirá programación asíncrona. Veamos cuáles son
+    las principales diferencias respecto a las promesas que
+    veíamos en el anterior ejercicio:
+        •   Una promesa siempre devolverá un valor o
+            un error, mientras que un observable puede
+            emitir múltiples valores en el tiempo. Por este
+            motivo, a veces se le dene como un ujo de
+            datos o “stream”.
+        •   Una promesa no puede cancelarse, en cambio
+            un observable sí. Si el valor esperado por una
+            promesa (p. ej., el resultado de una llamada a
+            un servicio) ya no es necesario, no hay manera
+            de cancelar esa promesa. Siempre acabará
+            llamándose a su “callback” de éxito o rechazo.
+            En un observable no ocurre lo mismo, ya que
+            siempre podemos anularlo cancelando la
+            suscripción previa que se habría realizado.
     
+    Metodos del observable:
+        *   next(<data>)
+        *   error(<data>)
+        *   complete()
+
+    Metodos del subscriptor
+        *   data    => ... // data of next()
+        *   error   => ... // data of error()
+        *   ()      => ... // data of complete()
+
+    La función ejecutor empieza a ejecutarse de forma asíncrona cuando un observador
+    (u “observer”) realiza una suscripción en el observable. Esta suscripción se traduce
+    en una ejecución al método “subscribe(observer)” del observable. En el caso que se
+    realizara otra suscripción al mismo observable, se pondría en marcha otro hilo de
+    ejecución asíncrona distinta.
+
+    Una vez realizada la suscripción, el observador (u “observer”) recibirá cualquier
+    dato emitido por el observable. En la suscripción al observable, es posible pasar
+    una instancia del objeto observador que previamente haya creado, o puede
+    pasar directamente las tres funciones de retorno o “callback” que lo
+    denen: la primera es ejecutada al recibir nuevos valores, la segunda al recibir
+    un error, y la última al recibir la noticación de nalización. Toda esa información
+    será emitida por el observable usando los siguientes métodos del observador:
+    next(), error() o complete(). Para cancelar una suscripción ejecutaremos
+    “unsuscribe()” sobre la suscripción. Esta cancelación siempre debe realizarse
+    en suscripciones de observables que emitan valores de forma indenida sin terminar
+    nunca. En caso contrario, podrían producirse memory leaks (problemas de
+    memoria).
+
+    Los observables aquí explicados son los llamados cold observables, no emiten valores
+    hasta que un observador se suscribe a ellos. Sin embargo, también existen los hot
+    observables, que emiten valores aunque no haya suscriptores. Para más información
+    consulte: http://reactivex.io/rxjs/manual/overview.html.

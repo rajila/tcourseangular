@@ -25,6 +25,8 @@ export class TmodeloneComponent implements OnInit {
   public observableSubFromPromise!: Subscription;
   public observableSubFromArray!: Subscription;
   public observableSubMap!: Subscription;
+  public observableSubMerge!: Subscription;
+  public observableSubConcat!: Subscription;
 
   constructor(private _bookService: BookService) { 
     this.lbooks = _bookService.getBooks(); // Obtiene los libros normalmente
@@ -75,6 +77,10 @@ export class TmodeloneComponent implements OnInit {
     this.observableSubMap = this._bookService.getObservableMap().subscribe(
       el => console.log('Map: ', el)
     );
+
+    this.observableSubMerge = this._bookService.getObservableMerge().subscribe(data => console.info('Merge: ', data));
+
+    this.observableSubConcat = this._bookService.getObservableConcat().subscribe(data => console.info('Concat: ', data));
   }
 
   ngOnDestroy(): void {
@@ -85,5 +91,7 @@ export class TmodeloneComponent implements OnInit {
     if (this.observableSubFromPromise) this.observableSubFromPromise.unsubscribe();
     if (this.observableSubFromArray) this.observableSubFromArray.unsubscribe();
     if (this.observableSubMap) this.observableSubMap.unsubscribe();
+    if (this.observableSubMerge) this.observableSubMerge.unsubscribe();
+    if (this.observableSubConcat) this.observableSubConcat.unsubscribe();
   }
 }
