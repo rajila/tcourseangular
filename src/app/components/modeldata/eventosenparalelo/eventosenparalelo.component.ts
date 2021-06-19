@@ -43,4 +43,8 @@ export class EventosenparaleloComponent implements OnInit {
       clearInterval(sInterval);
     });
   }
+
+  updateDataOnSecuencia(): void {
+    this.postService.updateDataOnSecuencia().subscribe(data => this.resultHttp = data);
+  }
 }

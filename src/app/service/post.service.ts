@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable, forkJoin, interval, of, from } from 'rxjs';
-import { map, delay, take, tap, reduce } from 'rxjs/operators';
+import { map, delay, take, tap, reduce, switchMap } from 'rxjs/operators';
 
 import { Post } from 'src/app/interfaces/post';
 
@@ -122,5 +122,18 @@ export class PostService {
                       delay(5000*10),
                       reduce((x:number, y:number) => x + y, 0)
                     );
+    }
+
+  // Eventos en SECUENCIA
+    updateDataOnSecuencia(): Observable<Post> {
+      return this.http.get<Post>('https://jsonplaceholder.typicode.com/posts/1')
+                      .pipe(
+                        tap(data => console.info('GET: ', data)),
+                        switchMap((data: Post) => {
+                          data.title = '(MODIFICADO) ' + data.title;
+                          return this.http.put<Post>('https://jsonplaceholder.typicode.com/posts/1', data)
+                        }),
+                        tap(data => console.info('UPDATE: ', data))
+                      );
     }
 }

@@ -8,3 +8,13 @@ Lanzar peticiones HTTP en paralelo combinando su resultado
         en un nuevo observable. Este último emitirá una cadena con el último valor emitido
         por cada uno de los observables cuando todos ellos hayan acabado. Si los observables
         emitiesen más de un valor, solamente se tendría en cuenta el último.
+
+Lanzar peticiones HTTP en secuencia
+
+    Un caso de uso común es el de lanzar una petición HTTP, recoger su resultado y, nalmente,
+    usarlo para realizar otra petición HTTP. Esta secuencia de peticiones la podemos
+    hacer usando el operador switchMap de la librería RxJs.
+
+    “switchMap” es parecido al operador “map” que vimos en el capítulo 053. Sin embargo,
+    debemos usar “switchMap” cuando la función de transformación devuelva
+    un observable y “map” cuando devuelva un valor.
