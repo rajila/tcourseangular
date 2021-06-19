@@ -1,0 +1,27 @@
+HttpClient: Intercepción de peticiones y respuestas
+    
+    Una característica importante del módulo HttpClient
+    (“HttpClientModule”) es la intercepción, la posibilidad
+    de crear interceptores de mensajes entre el frontend
+    y backend para poderlos modicar, monitorizar, etc.
+    Para crear un interceptor declararemos una clase decorada
+    con @Injectable() y que implemente la interfaz
+    HttpInterceptor. La implementación de la interfaz
+    requiere que añadamos el método intercept() en
+    nuestra clase.
+
+    El método “intercept” tiene dos parámetros de entrada: req (petición) y next (“siguiente
+    controlador”). El procedimiento sería el siguiente. El interceptor realiza las
+    acciones que convengan sobre la petición interceptada (req) y realiza la llamada
+    “next.handle(req)”. Esta llamada tiene que realizarse para que el resto de interceptores
+    (en caso que los tuviéramos) procesen la petición y para que esta acabe realizándose.
+    Por último indicar que la llamada “next.handle(req)” devuelve un observable
+    para la respuesta de la petición. Este observable también deberá devolverse por
+    nuestro método “intercept”.
+
+    De este código cabe destacar lo siguiente. Las clases HttpRequest y HttpResponse
+    son inmutables, no podemos modicarlos. Por este motivo,
+    las modicaciones las realizamos sobre un clon o duplicado de la petición
+    original. Esto es así para evitar que, en operaciones de reenvío, peticiones
+    modicadas por la cadena de interceptores vuelvan a entrar, ya modicadas,
+    por la misma cadena.
