@@ -125,7 +125,7 @@ export class PostService {
     }
 
   // Eventos en SECUENCIA
-    updateDataOnSecuencia(): Observable<Post> {
+    updateDataOnSecuenciaUsingSwitchmap(): Observable<Post> {
       return this.http.get<Post>('https://jsonplaceholder.typicode.com/posts/1')
                       .pipe(
                         tap(data => console.info('GET: ', data)),

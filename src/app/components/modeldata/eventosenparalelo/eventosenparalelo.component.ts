@@ -45,6 +45,6 @@ export class EventosenparaleloComponent implements OnInit {
   }
 
   updateDataOnSecuencia(): void {
-    this.postService.updateDataOnSecuencia().subscribe(data => this.resultHttp = data);
+    this.postService.updateDataOnSecuenciaUsingSwitchmap().subscribe(data => this.resultHttp = data);
   }
 }
