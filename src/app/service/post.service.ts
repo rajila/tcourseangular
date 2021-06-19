@@ -84,7 +84,7 @@ export class PostService {
       );
     }
 
-    // Solo toma el ultimo valor que emite el Observable
+    // Solo toma el ULTIMO VALOR que emite el Observable
     // Los observables ejecutan en PARALELO
     // El resultado de los observables se muestra en la posición respectiva del array de Observables 
     // Emite un solo valor de tipo ARRAY
