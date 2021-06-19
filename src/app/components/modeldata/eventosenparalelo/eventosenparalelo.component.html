@@ -1,0 +1,11 @@
+<p>eventosenparalelo works!</p>
+<section class="contentinternal">
+    <input type="button" value="GET DATA PARALELO" (click)="getDataParaleloUsingForkjoin();" /> |
+    <input type="button" value="GET DATA PARALELO II" (click)="getDataParaleloUsingForkjoinII();" /> |
+    <input type="button" value="SUMA DATA WITH PARALELO III" (click)="getDataParaleloUsingForkjoinIII();" /> | 
+    <input type="button" value="SUMA DATA WITHOUT PARALELO" (click)="getDataParaleloWithoutForkjoin();" />
+</section>
+<section class="contentinternal">
+    <h2>Resultado: {{ contador }}</h2>
+    <pre>{{ resultHttp | json }}</pre>
+</section>

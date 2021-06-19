@@ -6,6 +6,7 @@ import { TmodeltwoComponent } from './tmodeltwo/tmodeltwo.component';
 import { TmodelthreeComponent } from './tmodelthree/tmodelthree.component';
 import { NotfoundComponent } from '../notfound/notfound.component';
 import { ModeldatahttpComponent } from './modeldatahttp/modeldatahttp.component';
+import { EventosenparaleloComponent } from './eventosenparalelo/eventosenparalelo.component';
 
 const routes: Routes = [
   { path: 'modelone', component: TmodeloneComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
     ]
   },
   { path: 'modelhttp', component: ModeldatahttpComponent},
+  { path: 'httpparalelo', component: EventosenparaleloComponent},
 ];
 
 @NgModule({

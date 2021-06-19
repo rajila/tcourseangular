@@ -1,0 +1,10 @@
+Lanzar peticiones HTTP en paralelo combinando su resultado
+
+    Para lanzar varias peticiones HTTP en paralelo y combinar su resultado podemos
+    usar el operador forkjoin de la librería RxJs
+
+    Importante:
+        “forkjoin” nos permite combinar varios observables, obtenidos de peticiones HTTP,
+        en un nuevo observable. Este último emitirá una cadena con el último valor emitido
+        por cada uno de los observables cuando todos ellos hayan acabado. Si los observables
+        emitiesen más de un valor, solamente se tendría en cuenta el último.

@@ -11,6 +11,7 @@ import { PostService } from '../../service/post.service';
 import { ModeldatahttpComponent } from './modeldatahttp/modeldatahttp.component';
 import { InterceptorRequestService } from 'src/app/middleware/interceptor-request.service';
 import { InterceptorResponseService } from 'src/app/middleware/interceptor-response.service';
+import { EventosenparaleloComponent } from './eventosenparalelo/eventosenparalelo.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { InterceptorResponseService } from 'src/app/middleware/interceptor-respo
     TmodeloneComponent,
     TmodeltwoComponent,
     TmodelthreeComponent,
-    ModeldatahttpComponent
+    ModeldatahttpComponent,
+    EventosenparaleloComponent
   ],
   imports: [
     CommonModule,
