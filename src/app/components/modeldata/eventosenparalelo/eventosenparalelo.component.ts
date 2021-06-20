@@ -1,3 +1,4 @@
+import { HttpEventType } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { PostService } from 'src/app/service/post.service';
 
@@ -46,5 +47,16 @@ export class EventosenparaleloComponent implements OnInit {
 
   updateDataOnSecuencia(): void {
     this.postService.updateDataOnSecuenciaUsingSwitchmap().subscribe(data => this.resultHttp = data);
+  }
+
+  getFullDataUsingProgress(): void {
+    this.postService.getFullDataUsingProgress().subscribe((event:any) => {
+      if (event.type === HttpEventType.UploadProgress) {
+        const percentDone = Math.round(100 * event.loaded / event.total);
+        console.log(`Fichero transferido en un ${percentDone}%`);
+      } else if (event.type === HttpEventType.Response) {
+        this.resultHttp = event.body;
+      }
+    });
   }
 }

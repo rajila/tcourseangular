@@ -18,3 +18,13 @@ Lanzar peticiones HTTP en secuencia
     “switchMap” es parecido al operador “map” que vimos en el capítulo 053. Sin embargo,
     debemos usar “switchMap” cuando la función de transformación devuelva
     un observable y “map” cuando devuelva un valor.
+
+Eventos de progreso
+
+    Hasta este momento todas las peticiones HTTP que hemos visto se realizaban de forma
+    muy rápida porque el tamaño de los mensajes transmitidos era muy pequeño.
+    Sin embargo, habrá veces que necesitemos transferir un mensaje mucho más grande
+    que necesite cierto tiempo. En estos casos, siempre es bueno poder indicar al usuario
+    el progreso de esa transferencia. Para poder hacerlo, deberemos capturar los eventos
+    de progreso y lo haremos realizando las peticiones con el método genérico “request(
+    HttpRequest)” y la opción reportProgres.

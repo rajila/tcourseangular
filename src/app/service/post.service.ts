@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders, HttpRequest, HttpEvent } from '@angular/common/http';
 import { Observable, forkJoin, interval, of, from } from 'rxjs';
 import { map, delay, take, tap, reduce, switchMap } from 'rxjs/operators';
 
@@ -135,5 +135,16 @@ export class PostService {
                         }),
                         tap(data => console.info('UPDATE: ', data))
                       );
+    }
+
+  // Evento de PROGESO
+    getFullDataUsingProgress(): Observable<HttpEvent<Array<Post>>> {
+      const data = {
+        'title': 'Critica de la pelicula', 
+        'body': 'Me ha gustado mucho',
+        'userId': 1
+      };
+      const reqHttp = new HttpRequest('POST', 'https://jsonplaceholder.typicode.com/posts', data, { reportProgress: true });
+      return this.http.request(reqHttp);
     }
 }
