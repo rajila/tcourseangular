@@ -1,0 +1,70 @@
+<p>introform works!</p>
+<div class="row p-2">
+    <section class="contentinternal container p-1 col-5">
+        <form (ngSubmit)="onSubmit();" #formData="ngForm">
+            <div class="form-group">
+                <label for="codigo">Código</label>
+                <input type="text" class="form-control" name="code" #codigo="ngModel" [(ngModel)]="code" required (change)="showCode();" />
+                <span *ngIf="!codigo.value && codigo.touched">
+                    El código es obligatorio
+                </span>
+            </div> 
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" [(ngModel)]="name" #nameH="ngModel" class="form-control" placeholder="Ingresar name" required filtrarCaracteres maxlength="15" minlength="5" />
+                <div *ngIf="nameH.invalid && (nameH.touched || nameH.dirty)">
+                    <div *ngIf="nameH.errors.required" class="alert alert-danger">
+                        El nombre es requerido
+                    </div>
+                    <div *ngIf="nameH.errors.minlength" class="alert alert-danger">
+                        Al menos 5 caracteres
+                    </div>
+                    <div *ngIf="nameH.errors.filtrarCaracteres" class="alert alert-danger">
+                        Solo se permiten letras entre A to Z en MAYUSCULAS
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad</label>
+                <input type="number" name="edad" [(ngModel)]="edad" #edadH="ngModel" required class="form-control" />
+                <div *ngIf="edadH.invalid && (edadH.touched || edadH.dirty)">
+                    <div *ngIf="edadH.errors.required" class="alert alert-danger">
+                        Campo requerido
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="opcion">Opcion</label>
+                <select class="form-control" name="opcion" [(ngModel)]="opcion">
+                    <option value="Uno-1">Uno</option>
+                    <option value="Dos-2">Dos</option>
+                    <option value="Tres-3">Tres</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Sexo</label>
+                <div class="form-control">
+                    <label><input name="sexo" [(ngModel)]="sexo" value="H" class="mx-1" type="radio" checked="true" />Hombre</label>
+                    <label><input name="sexo" [(ngModel)]="sexo" value="M" class="mx-1" type="radio" />Mujer</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="comentarios">Comentarios</label>
+                <div class="textarea-btn-holder form-group form-group-replace">
+                    <textarea name="comentario" [(ngModel)]="comentario" class="form-control text-comment"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label><input name="activar" [(ngModel)]="activar" class="max-1" type="checkbox" />Activar</label>
+            </div>
+            <button [disabled]="!formData.form.valid" type="submit" class="btn btn-primary m-x-2">Submit</button>
+        </form>
+    </section>
+    <section class="contentinternal col-5">
+        <pre>{{ formData.value | json }}</pre>
+        <section class="contentinternal">
+            <pre>Codigo: {{ code }} - {{ codigo.value }} - {{ codigo.valid }}</pre>
+            <pre>Name: {{ name }} - {{ nameH.value }} - {{ nameH.className }}</pre>
+        </section>
+    </section>
+</div>

@@ -1,0 +1,72 @@
+Forms: Introducción
+    Los formularios son uno de los elementos más importantes
+    en las aplicaciones de gestión ya que son, en
+    esencia, los que nos permiten obtener y mostrar información
+    para registrarla o realizar acciones a partir de la
+    misma.
+
+    En HTML disponemos de un buen conjunto de elementos
+    mediante los cuales podemos fabricar nuestros
+    formularios, entre los que destacamos los siguientes:
+    input select radio , , button, textarea, checkbox,
+    buttons, etc.
+
+    Los inputs poseen una gran variedad de tipos donde, además de los clásicos text,
+    password y number, podemos enumerar los siguientes: color, date, datetime-
+    local, email, month, range, search, tel, time, url, week, etc. En función
+    del tipo de input indicado, se facilita el tratamiento del tipo de dato relacionado
+    con el mismo. Por ejemplo, si indicamos un tipo number, veremos que en el input
+    solo se pueden introducir números.
+
+    Cada elemento puede llevar asociados una serie de eventos mediante los cuales podemos
+    realizar acciones, ya sea desde el propio template o desde su componente
+    asociado.
+
+    Los atributos más clásicos que pueden asociarse a muchos de los tipos son: value,
+    disabled, max, maxlength, min, pattern, readonly, required, size, step.
+    Una buena práctica es incluir cada campo en un div al que asociaremos la clase
+    form-group y en el que denamos una etiqueta y el propio control a utilizar. Al
+    control le asociaremos también la clase form-control.
+
+Forms: Estado de los objetos
+    El estado de los objetos viene determinado por un
+    conjunto de clases que nos permitirá averiguar si los
+    objetos de un formulario han sido tratados o modi-
+    cados o sin son válidos o no respecto de sus posibles
+    restricciones.
+    En el ejercicio destinado a validaciones veremos algunos
+    de sus posibles usos, pero en este ejercicio, nos vamos
+    a dedicar a presentarlos y explicar cuál es la información
+    que nos aportan. Los estados más importantes
+    de un objeto están representados por alguna de las siguientes
+    clases:
+
+    *   ng-touched: Ya ha tenido el foco en algún momento.
+    *   ng-untouched: Aún no ha tenido el foco.
+    *   ng-dirty: Se ha hecho alguna modificación.
+    *   ng-pristine: Aun no se ha modicado nada.
+    *   ng-valid: Posee un contenido válido.
+    *   ng-invalid: Posee un contenido inválido.
+    *   ng-pending: Validaciones asíncronas pendientes.
+
+    Un objeto posee varias clases asociadas simultáneamente, aunque algunas de ellas
+    son incompatibles entre sí como pueden ser ng-touched con ng-untouched,
+    ng-dirty con ng-pristine, o ng-valid con ng-invalid.
+
+Forms: Validaciones
+    Las validaciones en los formularios son imprescindibles
+    para poder recoger la información con la calidad necesaria
+    antes de enviarla para su procesamiento posterior.
+    Podemos realizar tantas validaciones como sean necesarias
+    en cada uno de los controles que queramos y habilitar
+    o deshabilitar el botón Submit del formulario dependiendo
+    de si hay o no errores en el formulario.
+
+    Nota: No funciona para validaciones de input type:number con las properties: min, max
+
+Forms: Validaciones personalizadas
+    En ocasiones, necesitamos realizar personalizaciones algo más complicadas que las
+    mencionadas en ejercicios anteriores. Para estos casos, podemos crear una validación
+    personalizada en la que, mediante una función, controlemos todos los detalles
+    que sean necesarios. La idea es crear un archivo adicional que contenga la directiva
+    que usaremos en la validación e importarla en el archivo app.module.ts.

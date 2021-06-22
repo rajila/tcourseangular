@@ -46,4 +46,4 @@
 	ng generate module components/directiva --module=app --routing
 
 --flat: permite crear elemento sin directorio
---mdodule: indica donde se debe importar el modulo creado
+--module: indica donde se debe importar el modulo creado

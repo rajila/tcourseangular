@@ -27,6 +27,7 @@ import { CmpasyncModule } from './components/cmpasync/cmpasync.module';
 import { ModeldataModule } from './components/modeldata/modeldata.module';
 import { DatabindingComponent } from './components/databinding/databinding.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { CustomformsModule } from './components/customforms/customforms.module';
 
 @NgModule({
   declarations: [ // define las vistas que contiene el modulo
@@ -56,6 +57,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
     PipeModule, 
     CmpasyncModule, 
     ModeldataModule,
+    CustomformsModule,
     AppRoutingModule, // Debe ir al final
   ],
   providers: [], // servicios usados de forma global y accesibles desde cualquier parte de la app
