@@ -1,0 +1,42 @@
+<p>formreactive works!</p>
+<div class="row p-2">
+    <section class="contentinternal container p-1 col-5">
+        <form  [formGroup]="form" (ngSubmit)="onSubmit();">
+            <div class="form-group">
+                <label for="codigo">Código</label>
+                <input type="text" class="form-control" formControlName="code" />
+                <span *ngIf="form.controls.code.errors && (form.controls.code.touched || form.controls.code.dirty)">
+                    <div *ngIf="form.controls.code.errors.required" class="alert alert-danger">
+                        El codigo es requerido
+                    </div>
+                    <div *ngIf="form.controls.code.errors.maxlength" class="alert alert-danger">
+                        Maximo 5 caracteres
+                    </div>
+                </span>
+            </div> 
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" formControlName="name" class="form-control" placeholder="Ingresar name" />
+                <div *ngIf="form.controls.name.errors && (form.controls.name.touched || form.controls.name.dirty)">
+                    <div *ngIf="form.controls.name.errors.required" class="alert alert-danger">
+                        El nombre es requerido
+                    </div>
+                    <div *ngIf="form.controls.name.errors.minlength" class="alert alert-danger">
+                        Al menos 5 caracteres
+                    </div>
+                    <div *ngIf="form.controls.name.errors.filtrarCaracteres" class="alert alert-danger">
+                        Solo se permiten letras entre A to Z en MAYUSCULAS
+                    </div>
+                </div>
+            </div>
+            <button [disabled]="!form.valid" type="submit" class="btn btn-primary m-x-2">Submit</button>
+        </form>
+    </section>
+    <section class="contentinternal col-5">
+        <pre>{{ form.value | json }}</pre>
+        <section class="contentinternal">
+            <pre>Codigo: {{ form.controls.code.value }}</pre>
+            <pre>Name: {{ form.controls.name.errors | json }}</pre>
+        </section>
+    </section>
+</div>

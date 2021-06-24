@@ -70,3 +70,50 @@ Forms: Validaciones personalizadas
     personalizada en la que, mediante una función, controlemos todos los detalles
     que sean necesarios. La idea es crear un archivo adicional que contenga la directiva
     que usaremos en la validación e importarla en el archivo app.module.ts.
+
+Forms: Reactive
+    Los reactive forms o model-driven se diferencian
+    de los en que template-driven la creación de los
+    controles se hace en la clase del componente. Otra diferencia
+    importante es que los reactive forms son
+    síncronos mientras que los template-driven son
+    asíncronos. Por otra parte, los reactive forms permiten
+    añadir controles dinámicamente y facilitan los test
+    unitarios.
+
+    En la plantilla, simplemente deniremos los tags
+    HTML correspondientes a los inputs, pero estos quedarán
+    relacionados con la clase del componente gracias
+    a formControlName y formGroupName para
+    los controles y grupos de controles, respectivamente.
+
+Forms: Reactive validaciones
+    Las validaciones en los se declaran en la denición reactive forms de los controles
+    con la siguiente sintaxis:
+                    campo:[‘valor_defecto’,Validators.XXX]
+
+    Si solo necesita una validación, XXX se indica dicha validación (p. ej., Validators.
+    required). Sin embargo, si necesitamos aplicar varias validaciones, XXX contendrá
+    la palabra compose y la sintaxis será la siguiente:
+                    codigo:[‘valor_defecto’,    Validators.compose([
+                                                    Validators.validacion1,
+                                                    Validators.validacion2,
+                                                    Validators.validacion3
+                                                ])
+                            ],
+
+Forms: Reactive validaciones personalizadas
+    De forma similar a como vimos en el caso de los forms
+    template-driven, es posible realizar validaciones
+    personalizadas apoyándonos en una clase auxiliar
+    que disponga de una función, la cual podemos
+    desarrollar para que verique de forma personalizada
+    cualquier entrada de cualquier campo del formulario.
+    En este caso, usaremos la misma función que fabricamos
+    en el ejercicio formValidaEsp pero con
+    algunos pequeños cambios. Recuerde que dicha función
+    vericaba que todas las letras introducidas en
+    el campo fuesen mayúsculas de forma que, si no lo
+    son, generará un error.
+
+    
