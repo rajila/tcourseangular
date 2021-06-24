@@ -29,7 +29,9 @@
                     </div>
                 </div>
             </div>
-            <button [disabled]="!form.valid" type="submit" class="btn btn-primary m-x-2">Submit</button>
+            <br />
+            <button [disabled]="!form.valid" type="submit" class="btn btn-primary m-x-2">Submit</button> | 
+            <button [disabled]="!existUser" type="button" (click)="loadData();" class="btn btn-primary m-x-2">Cargar Datos</button>
         </form>
     </section>
     <section class="contentinternal col-5">

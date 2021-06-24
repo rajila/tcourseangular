@@ -116,4 +116,20 @@ Forms: Reactive validaciones personalizadas
     el campo fuesen mayúsculas de forma que, si no lo
     son, generará un error.
 
-    
+Forms: LocalStorage
+    Una de las tareas de los formularios es la de recoger datos y mostrarlos. Para ello, generalmente
+    se utilizan bases de datos que tratamos mediante servicios. Estos temas
+    se tratan en otros ejercicios de este libro, pero a modo de recurso sencillo queríamos
+    mostrar la posibilidad de almacenar datos en lo que se denomina LocalStorage
+    que viene a sustituir a las antiguas cookies y que, en denitiva, se trata de un espacio
+    que ofrecen los navegadores para almacenar entre y Mb 2,5 5 de información.
+    Podemos analizar el contenido de este espacio accediendo a las herramientas de desarrolladores
+    (en el caso de Google Chrome en el apartado Application->Storage->
+    Local Storage).
+
+    Para almacenar un valor, vemos que usamos la expresión localStorage.setItem(clave, valor).
+
+    Para leer los datos, usamos la expresión localStorage.getItem(clave). En este caso usamos el operador Elvis (?) 
+    para inicializar el campo con un nulo (“”) en caso de que esté vacío en LocalStorage.
+
+    Para asignar el valor al control usamos el método patchValue del objeto form (FormGroup).
